@@ -43,6 +43,7 @@ if (global.chatgpt.data === null) await global.loadChatgptDB()
 /*------------------------------------------------*/	
 try {
 m = smsg(this, m) || m
+global.mconn = m
 if (!m)
 return
 m.exp = 0
@@ -1472,29 +1473,6 @@ export async function participantsUpdate({id, participants, action}) {
  * Handle groups update
  * @param {import('@whiskeysockets/baileys').BaileysEventMap<unknown>['groups.update']} groupsUpdate
  */
-
-if (chat.antifake && isBotAdminNn && action === 'add') {
-const prefijosPredeterminados = [1, 2, 4, 6, 7, 8, 9] // Puedes editar que usuarios deseas que se eliminen si empieza por algunos de los números
-const rutaArchivo = './prefijos.json'
-let prefijos = []
-const existeArchivo = fs.existsSync(rutaArchivo)
-if (existeArchivo) {
-try {
-const contenido = fs.readFileSync(rutaArchivo, 'utf-8')
-prefijos = JSON.parse(contenido)
-} catch (error) {
-console.log('Error "prefijos.json": ', error)
-return
-}} else {
-prefijos = prefijosPredeterminados
-}
-const comienzaConPrefijo = prefijos.some(prefijo => user.startsWith(prefijo.toString()))
-if (comienzaConPrefijo) {
-let texto = mid.mAdvertencia + mid.mFake2(user)
-await conn.sendMessage(id, { text: texto, mentions: [user] })
-let responseb = await conn.groupParticipantsUpdate(id, [user], 'remove')
-if (responseb[0].status === "404") return      
-}}
 
 export async function groupsUpdate(groupsUpdate) {
 if (opts['self'] && !isOwner && !isROwner)
