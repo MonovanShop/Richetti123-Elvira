@@ -125,9 +125,9 @@ global.moment = moment
 // [ES] > Agregate a ti, colaboradores o ayudates, aparecerá en el comando de lista de contactos.
 // [EN] > Adding yourself, collaborators or helpers will appear in the contact list command.
 global.official = [ // Agregate si eres Owner
-["527772668134", 'TruenoBot', 1], 
-["527772668134", 'TruenoBot', 1],  
-["527772668134", 'TruenoBot', 1]]
+["527772668134", 'ElviraBot', 1], 
+["527772668134", 'ElviraBot', 1],  
+["527772668134", 'ElviraBot', 1]]
 
 global.mail = '' // Add email
 global.desc = '' // Add short description (20 caractres max)
@@ -135,8 +135,8 @@ global.desc2 = '' // Add long description (90 caractres max) (Este parámetro se
 global.country = '' // Add country, example: 🇪🇨
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 
-global.packname = `TruenoBot` //"MichiBot"
-global.author = `TruenoBot` //"MichiBot"
+global.packname = `ElviraBot` //"MichiBot"
+global.author = `ElviraBot` //"MichiBot"
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 // [ES] > INFORMACIÓN DE VERSIONES DEL BOT, POR FAVOR 
@@ -144,7 +144,7 @@ global.author = `TruenoBot` //"MichiBot"
 // [EN] > BOT VERSION INFORMATION, PLEASE KEEP THIS UNCHANGED, WE STRIVE DAILY TO PROVIDE YOU WITH A BOT FOR THE COMMUNITY, BE GRATEFUL
 global.vs = "1.7.0"
 global.vsJB = "2.5 (Beta)"
-global.gt = "TruenoBot"
+global.gt = "ElviraBot"
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 
